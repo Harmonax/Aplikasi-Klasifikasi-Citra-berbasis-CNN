@@ -1,5 +1,5 @@
 ---
-title: Klasifikasi Gambar CIFAR-10
+title: Klasifikasi Citra Berbasis CNN dari Data CIFAR-10
 emoji: 🖼️
 colorFrom: blue
 colorTo: red
@@ -8,7 +8,7 @@ app_port: 7860
 pinned: false
 ---
 
-# Klasifikasi Gambar CIFAR-10 dengan CNN
+# Klasifikasi Citra Berbasis CNN dari Data CIFAR-10
 
 Aplikasi web Streamlit untuk mengklasifikasikan gambar ke 10 kelas CIFAR-10
 (airplane, automobile, bird, cat, deer, dog, frog, horse, ship, truck)
@@ -166,6 +166,19 @@ color jitter), dan kalibrasi confidence (temperature scaling).
 2. Di share.streamlit.io pilih repo, branch, dan main file `app.py`.
 3. Di "Advanced settings", pilih Python 3.13 (atau 3.12). TensorFlow 2.21 hanya
    menyediakan wheel untuk Python 3.10–3.13, jadi Python 3.14 akan gagal install.
+
+Kendala yang ditemui saat deploy: percobaan pertama gagal dengan
+`Error installing requirements`. Log build menunjukkan environment memakai
+Python 3.14.0, sehingga pip tidak menemukan wheel TensorFlow:
+
+```
+ERROR: Could not find a version that satisfies the requirement tensorflow-cpu==2.21.0
+ERROR: No matching distribution found for tensorflow-cpu==2.21.0
+```
+
+Solusinya mengubah versi Python app menjadi 3.13 lalu deploy ulang. Versi Python
+tidak bisa diatur lewat `runtime.txt` di Community Cloud, hanya lewat
+"Advanced settings" di UI.
 
 ### Hugging Face Spaces (Docker)
 

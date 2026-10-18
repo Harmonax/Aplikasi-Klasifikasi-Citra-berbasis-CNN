@@ -9,7 +9,7 @@ def test_app_runs_with_model(monkeypatch, dummy_model_path):
     monkeypatch.setenv("MODEL_PATH", str(dummy_model_path))
     at = AppTest.from_file(APP_FILE, default_timeout=60).run()
     assert not at.exception
-    assert at.title[0].value == "Klasifikasi Gambar CIFAR-10"
+    assert at.title[0].value == "Klasifikasi Citra Berbasis CNN dari Data CIFAR-10"
     assert len(at.error) == 0
     assert len(at.info) == 1  # belum ada gambar
 

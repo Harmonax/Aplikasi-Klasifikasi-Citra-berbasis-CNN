@@ -15,7 +15,11 @@ from model_utils import (
 LOW_CONFIDENCE = 0.50
 PREVIEW_SIZE = 256
 
-st.set_page_config(page_title="Klasifikasi Gambar", page_icon="🖼️", layout="centered")
+st.set_page_config(
+    page_title="Klasifikasi Citra Berbasis CNN",
+    page_icon="🖼️",
+    layout="centered",
+)
 
 
 @st.cache_resource(show_spinner="Memuat model CNN...")
@@ -43,9 +47,9 @@ with st.sidebar:
     )
 
 # ---------- Halaman utama ----------
-st.title("Klasifikasi Gambar CIFAR-10")
+st.title("Klasifikasi Citra Berbasis CNN dari Data CIFAR-10")
 st.write(
-    "Upload sebuah gambar, lalu model CNN akan memprediksi termasuk kelas apa "
+    "Upload sebuah gambar, lalu model CNN akan memprediksi termasuk kelas manakah "
     "dari 10 kelas CIFAR-10 beserta probabilitas tiap kelas."
 )
 
