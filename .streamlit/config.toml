@@ -1,0 +1,6 @@
+[server]
+# Batas ukuran upload (MB); foto HP biasanya < 10 MB.
+maxUploadSize = 20
+
+[browser]
+gatherUsageStats = false

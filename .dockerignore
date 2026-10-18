@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.git/
+.kiro/
+tests/
+test_images/
+hasil_uji.csv
+*.pdf
+*.docx
+*.pptx
+*.zip

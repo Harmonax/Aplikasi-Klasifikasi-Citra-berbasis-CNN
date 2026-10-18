@@ -1,0 +1,13 @@
+# Environment & cache
+.venv/
+__pycache__/
+.pytest_cache/
+
+# Output evaluasi
+hasil_uji.csv
+
+# Dokumen tugas pribadi di folder ini (jangan ikut ter-commit)
+*.pdf
+*.docx
+*.pptx
+*.zip
